@@ -27,7 +27,7 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $request)
     {
-		//\Log::debug('Login Request:', $request->all());
+		\Log::debug('Login Request:', $request->all());
         $credentials = $request->getCredentials();
 
         if(!Auth::validate($credentials)):

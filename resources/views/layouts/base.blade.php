@@ -15,6 +15,12 @@
         font-family: 'Fira Sans', sans-serif; /* Import this font or choose another one */
     }
 	
+	.center-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
 
 	.form-structor {
 		background-color: rgba(0, 0, 0, 0.5);
