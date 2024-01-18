@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Task;
+use Illuminate\Support\Facades\Auth;
 
 class CreateTask extends Component
 {
@@ -26,7 +27,10 @@ class CreateTask extends Component
 
     public function createTask()
     {
+        $userId = Auth::id();
+
         Task::create([
+            'user_id' => $userId,
             'description' => $this->description
         ]);
     }
